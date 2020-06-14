@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--配置实体类型的别名-->
+	<typeAliases>
+		<!--1.利用typeAlias为某个实体类取别名-->
+		<!--<typeAlias type="com.kgc.entity.Student" alias="student"></typeAlias>-->
+		<!--2.使用package为包下所有的实体类型取别名
+           name 指定包名、生成实体的别名就是类名-->
+		<package name="com.team.house_backapi.entity"></package>
+	</typeAliases>
+	<!--分页的插件-->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+	</plugins>
+	<!-- 加载sql映射文件 -->
+	<mappers>
+		<package name="com.team.house_backapi.mapper"></package>
+	</mappers>
+
+</configuration>
