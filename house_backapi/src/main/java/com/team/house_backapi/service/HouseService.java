@@ -29,5 +29,10 @@ public interface HouseService {
 
     public PageInfo<House>  getBroswerHouse(HouseCondition houseCondition);
 
+    /**
+     *
+     */
+    public House getUpdateHosue(String id);
+
 
 }

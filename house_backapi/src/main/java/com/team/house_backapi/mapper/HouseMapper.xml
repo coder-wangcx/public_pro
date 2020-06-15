@@ -267,4 +267,11 @@
       and  price &lt; #{endPrice}
     </if>
   </select>
+
+  <!--根据id查询单条信息，进行修改-->
+  <select id="getHouseByID" parameterType="string" resultType="House">
+	select house.*,district.ID as did from house
+	left join district on house.STREET_ID = district.ID
+	where house.id = #{id}
+  </select>
 </mapper>

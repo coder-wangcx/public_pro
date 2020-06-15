@@ -26,4 +26,7 @@ public interface HouseMapper {
     //浏览出租房
     List<House> browserHouse(HouseCondition houseCondition);
 
+    //根据houseId查询单条然后修改
+    House getHouseByID(String id);
+
 }

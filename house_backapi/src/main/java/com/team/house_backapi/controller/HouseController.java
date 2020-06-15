@@ -94,5 +94,10 @@ public class HouseController {
         return new BaseResult(200,map);
     }
 
-
+    //查询单条 修改
+    @RequestMapping("getUpdateHosue")
+    public BaseResult getUpdateHouse(String id){
+        House updateHosue = this.houseService.getUpdateHosue(id);
+        return new BaseResult(200,updateHosue);
+    }
 }

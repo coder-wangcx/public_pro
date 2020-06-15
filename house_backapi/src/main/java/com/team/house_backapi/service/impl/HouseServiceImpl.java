@@ -45,4 +45,9 @@ public class HouseServiceImpl implements HouseService {
         List<House> list=this.houseMapper.browserHouse(houseCondition);
         return new PageInfo<House>(list);
     }
+
+    @Override
+    public House getUpdateHosue(String id) {
+        return houseMapper.getHouseByID(id);
+    }
 }

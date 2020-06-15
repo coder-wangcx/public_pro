@@ -37,6 +37,16 @@ public class House {
     private String sname; //街道名称
     private String dname; //区域名称
 
+    private Integer did;//区域的编号
+
+    public Integer getDid() {
+        return did;
+    }
+
+    public void setDid(Integer did) {
+        this.did = did;
+    }
+
     public String getTname() {
         return tname;
     }
